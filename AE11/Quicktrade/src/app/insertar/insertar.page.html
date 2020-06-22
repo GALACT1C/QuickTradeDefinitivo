@@ -66,9 +66,13 @@
       </ion-select>
     </ion-item>
   </div>
-
-  <ion-input [placeholder]="categoria"></ion-input>
-  <ion-text>{{categoria}}</ion-text>
+  <!--Ejercicio2-->
+  <ion-item>
+    <ion-text>¿Está a la venta?</ion-text>
+    <ion-input [(ngModel)]="venta"></ion-input>
+  </ion-item>
+  <!--Fin Ejercicio2-->
   <p></p>
+
   <ion-button (click)="insertar()">añadir</ion-button>
 </ion-content>

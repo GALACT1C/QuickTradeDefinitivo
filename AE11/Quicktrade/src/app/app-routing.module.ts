@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'modificar/:key',
     loadChildren: () => import('./modificar/modificar.module').then( m => m.ModificarPageModule)
   },
+  {
+    path: 'pregunta1',
+    loadChildren: () => import('./pregunta1/pregunta1.module').then( m => m.Pregunta1PageModule)
+  },
 
 ];
 

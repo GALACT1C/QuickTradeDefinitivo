@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pregunta1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text>Introduce el precio:</ion-text>
+  <ion-input type="search" ng-model="filtrar"></ion-input>
+
+  <div *ngFor="let item of productos | filter: filtrar">
+    <ion-text>Nombre: {{item.nombre}} </ion-text>
+    <ion-text>Precio: {{item.precio}}</ion-text>
+    <ion-button [routerLink]="['/detalles', item.key]">Detalles</ion-button>
+  </div>
+</ion-content>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ITecnologia, IInmobiliaria, IHogar, IMotor } from '../interfaces';
+import { ITecnologia, IInmobiliaria, IHogar, IMotor, IProducto } from '../interfaces';
 import { ProductoService } from '../services/producto.service';
 
 @Component({
@@ -11,8 +11,9 @@ import { ProductoService } from '../services/producto.service';
 export class ModificarPage implements OnInit {
 
   key: string;
-  producto: (ITecnologia & IInmobiliaria & IHogar & IMotor) = { "nombre": "", "descripcion": "", "precio": 0, "estado": "", "metros": 0, "numhab": 0, "numba": 0, "localidad": "", "tipov": "", "km": 0 };
-
+  //Ejercicio2
+  producto: (ITecnologia & IInmobiliaria & IHogar & IMotor) = { "nombre": "", "descripcion": "", "precio": 0, "estado": "", "metros": 0, "numhab": 0, "numba": 0, "localidad": "", "tipov": "", "km": 0, "venta" : "" };
+  //Fin Ejercicio2
   constructor(private _activatedRoute: ActivatedRoute, private _productoService: ProductoService) { }
 
   modificar() {
@@ -23,6 +24,9 @@ export class ModificarPage implements OnInit {
         ref.child("nombre").set(this.producto.nombre);
         ref.child("descripcion").set(this.producto.descripcion);
         ref.child("precio").set(this.producto.precio);
+        //Ejercicio2
+        ref.child("venta").set(this.producto.venta);
+        //Fin Ejercicio2
       }
 
       if (snapshot.child("categoria").val() == "tecnologia") {
@@ -30,6 +34,9 @@ export class ModificarPage implements OnInit {
         ref.child("descripcion").set(this.producto.descripcion);
         ref.child("precio").set(this.producto.precio);
         ref.child("estado").set(this.producto.estado);
+        //Ejercicio2
+        ref.child("venta").set(this.producto.venta);
+        //Fin Ejercicio2
       }
 
       if (snapshot.child("categoria").val() == "inmobiliaria") {
@@ -40,6 +47,9 @@ export class ModificarPage implements OnInit {
         ref.child("numhab").set(this.producto.numhab);
         ref.child("numba").set(this.producto.numba);
         ref.child("localidad").set(this.producto.localidad);
+        //Ejercicio2
+        ref.child("venta").set(this.producto.venta);
+        //Fin Ejercicio2
       }
 
       if (snapshot.child("categoria").val() == "motor") {
@@ -48,6 +58,9 @@ export class ModificarPage implements OnInit {
         ref.child("precio").set(this.producto.precio);
         ref.child("tipov").set(this.producto.tipov);
         ref.child("km").set(this.producto.km);
+        //Ejercicio2
+        ref.child("venta").set(this.producto.venta);
+        //Fin Ejercicio2
       }
     }
 

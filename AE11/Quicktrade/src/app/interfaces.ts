@@ -10,6 +10,9 @@ export interface IProducto{
     "categoria" : string,
     "precio" : number,
     "uid" : string //añadido
+    //Ejercicio2
+    "venta": string
+    //Fin Ejercicio2
 }
 
 export interface IKey extends IProducto{

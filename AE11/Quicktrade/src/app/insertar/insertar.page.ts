@@ -22,6 +22,9 @@ export class InsertarPage implements OnInit {
   tipov: string = "";
   km: number;
   precio: number;
+  //Ejercicio2
+  venta: string;
+  //Fin Ejercicio2
 
   constructor(private _activatedRoute: ActivatedRoute, private _productoService:ProductoService) {  }
 
@@ -39,7 +42,10 @@ export class InsertarPage implements OnInit {
         "descripcion": this.descripcion,
         "categoria": this.categoria,
         "precio": this.precio,
-        "uid":this._activatedRoute.snapshot.paramMap.get('id')
+        "uid":this._activatedRoute.snapshot.paramMap.get('id'),
+        //Ejercicio2
+        "venta": this.venta
+        //Fin Ejercicio2
       });
     }
 
@@ -50,7 +56,10 @@ export class InsertarPage implements OnInit {
         "categoria": this.categoria,
         "precio": this.precio,
         "estado": this.estado,
-        "uid":this._activatedRoute.snapshot.paramMap.get('id')
+        "uid":this._activatedRoute.snapshot.paramMap.get('id'),
+        //Ejercicio2
+        "venta": this.venta
+        //Fin Ejercicio2
       });
     }
 
@@ -64,7 +73,10 @@ export class InsertarPage implements OnInit {
         "numhab" : this.numhab,
         "numba" : this.numba,
         "localidad" : this.localidad,
-        "uid":this._activatedRoute.snapshot.paramMap.get('id')
+        "uid":this._activatedRoute.snapshot.paramMap.get('id'),
+        //Ejercicio2
+        "venta": this.venta
+        //Fin Ejercicio2
       });
     }
 
@@ -76,7 +88,10 @@ export class InsertarPage implements OnInit {
         "precio": this.precio,
         "tipov":this.tipov,
         "km":this.km,
-        "uid":this._activatedRoute.snapshot.paramMap.get('id')
+        "uid":this._activatedRoute.snapshot.paramMap.get('id'),
+        //Ejercicio2
+        "venta": this.venta
+        //Fin Ejercicio2
       });
     }
   }

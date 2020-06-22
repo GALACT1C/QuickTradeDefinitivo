@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">MODIFICAR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="producto != undefined">
+
+    <div *ngIf="producto.categoria == 'hogar'">
+      <ion-input [(ngModel)]="producto.nombre" [value]="producto.nombre">Nombre: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.descripcion" [value]="producto.descripcion">Descripcion: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.precio" [value]="producto.precio">Precio: </ion-input>
+    </div>
+
+    <div *ngIf="producto.categoria == 'tecnologia'">
+      <ion-input [(ngModel)]="producto.nombre" [value]="producto.nombre">Nombre: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.descripcion" [value]="producto.descripcion">Descripcion: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.estado" [value]="producto.estado">Estado: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.precio" [value]="producto.precio">Precio: </ion-input>
+    </div>
+
+    <div *ngIf="producto.categoria == 'inmobiliaria'">
+      <ion-input [(ngModel)]="producto.nombre" [value]="producto.nombre">Nombre: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.descripcion" [value]="producto.descripcion">Descripcion: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.metros" [value]="producto.metros">Metros: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.numhab" [value]="producto.numhab">Número de habitaciones: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.numba" [value]="producto.numba">Número de baños: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.localidad" [value]="producto.localidad">Localidad: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.precio" [value]="producto.precio">Precio: </ion-input>
+    </div>
+
+    <div *ngIf="producto.categoria == 'inmobiliaria'">
+      <ion-input [(ngModel)]="producto.nombre" [value]="producto.nombre">Nombre: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.descripcion" [value]="producto.descripcion">Descripcion: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.tipov" [value]="producto.tipov">Tipo de vehículo: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.km" [value]="producto.km">KM: </ion-input>
+      <p></p>
+      <ion-input [(ngModel)]="producto.precio" [value]="producto.precio">Precio: </ion-input>
+    </div>
+    <ion-button (click)="modificar()">Modificar</ion-button>
+  </div>
+</ion-content>
